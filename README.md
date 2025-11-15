@@ -45,7 +45,7 @@ password_hash VARCHAR(100)
 
 ## Setup Instructions
 1. Clone this repository:
-`git clone <repository-url>`
+`git clone https://github.com/indranil26/P0-Virtusa-JavaFSD.git`
 2. Update DB connection details in `JDBCUtils.java` and `MongoDBUtil.java` to match your environment.
 3. Build the project with Maven:
 4. Run the console app from your IDE or using:
