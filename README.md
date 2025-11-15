@@ -21,35 +21,34 @@ This is a mini social media application built in Java demonstrating the use of a
 - Maven for project and dependency management
 
 ## Project Structure
-- src/
-- model/ - Java classes defining entities (User, Post, Comment)
-- dao/ - Data Access Objects for MySQL & MongoDB interaction
-- service/ - Business logic layer (UserService, PostService)
-- util/ - Utility classes for DB connections, hashing, logging
-- ui/ - Console-based user interface (MainMenu.java)
+ src/
+ model/ - Java classes defining entities (User, Post, Comment)
+ dao/ - Data Access Objects for MySQL & MongoDB interaction
+ service/ - Business logic layer (UserService, PostService)
+ util/ - Utility classes for DB connections, hashing, logging
+ ui/ - Console-based user interface (MainMenu.java)
 
 
 ## Prerequisites
 - MySQL Server (local or remote) installed with database and `users` table created:
-CREATE TABLE users (
+`CREATE TABLE users (
 id INT AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(50) UNIQUE,
 full_name VARCHAR(100),
 email VARCHAR(100) UNIQUE,
 password_hash VARCHAR(100)
-);
+);`
 
 - MongoDB server running locally or remotely with access permissions
 - Java JDK and Maven installed
 
 ## Setup Instructions
 1. Clone this repository:
-git clone <repository-url>
+`git clone <repository-url>`
 2. Update DB connection details in `JDBCUtils.java` and `MongoDBUtil.java` to match your environment.
 3. Build the project with Maven:
 4. Run the console app from your IDE or using:
-mvn exec:java -Dexec.mainClass="ui.MainMenu"
-
+`mvn exec:java -Dexec.mainClass="ui.MainMenu"`
 
 ## Usage
 - Register a new user.
@@ -64,6 +63,3 @@ mvn exec:java -Dexec.mainClass="ui.MainMenu"
 - Posts and related social interactions are stored in MongoDB.
 - All sensitive actions are protected by login checks.
 - Sequential numbering of posts is implemented for easy liking/commenting.
-
-
-
