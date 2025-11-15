@@ -21,16 +21,17 @@ This is a mini social media application built in Java demonstrating the use of a
 - Maven for project and dependency management
 
 ## Project Structure
- src/
- model/ - Java classes defining entities (User, Post, Comment)
- dao/ - Data Access Objects for MySQL & MongoDB interaction
- service/ - Business logic layer (UserService, PostService)
- util/ - Utility classes for DB connections, hashing, logging
- ui/ - Console-based user interface (MainMenu.java)
+- src/
+- model/ - Java classes defining entities (User, Post, Comment)
+- dao/ - Data Access Objects for MySQL & MongoDB interaction
+- service/ - Business logic layer (UserService, PostService)
+- util/ - Utility classes for DB connections, hashing, logging
+- ui/ - Console-based user interface (MainMenu.java)
 
 
 ## Prerequisites
 - MySQL Server (local or remote) installed with database and `users` table created:
+
 `CREATE TABLE users (
 id INT AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(50) UNIQUE,
